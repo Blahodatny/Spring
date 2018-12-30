@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b375d70-5df7-4bd5-a006-35727e633361" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/blazen/server/controllers/NodeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/blazen/server/models/Nodes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/blazen/server/services/Jolka.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/blazen/server/services/node/NodeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/resources/validations/node.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/blazen/server/ServerApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/blazen/server/node/INodeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/blazen/server/node/INodeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/blazen/server/node/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/blazen/server/node/Nodes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/blazen/server/node/NodeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/out/production/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/blazen/server/controllers/NodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/blazen/server/controllers/api/NodeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/blazen/server/logIn/LogInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/blazen/server/controllers/LogInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/blazen/server/node/INodeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/blazen/server/repositories/INodeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/blazen/server/node/Nodes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/application.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/server/.gradle/" />
     <ignored path="$PROJECT_DIR$/server/build/" />
@@ -47,92 +51,103 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/logIn/LogInController.java">
+        <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/controllers/LogInController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+            <state relative-caret-position="168">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/ServerApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-              <folding>
-                <element signature="e#316#317#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/node/Nodes.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#222#223#0" expanded="true" />
-                <element signature="e#248#249#0" expanded="true" />
-                <element signature="e#288#289#0" expanded="true" />
-                <element signature="e#318#319#0" expanded="true" />
-                <element signature="e#107#108#0" expanded="true" />
-                <element signature="e#134#135#0" expanded="true" />
-                <element signature="e#174#175#0" expanded="true" />
-                <element signature="e#206#207#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/controllers/NodeController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#411#412#0" expanded="true" />
-                <element signature="e#455#456#0" expanded="true" />
-                <element signature="e#730#731#0" expanded="true" />
-                <element signature="e#773#774#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/node/INodeRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/settings.gradle">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-169">
-              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+            <state relative-caret-position="-264">
+              <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/models/Nodes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/controllers/api/NodeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/repositories/INodeRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/services/Jolka.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="56">
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/services/node/NodeService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="56">
+              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/main/resources/validations/node.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/main/resources/templates/logIn.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-590">
+              <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -167,10 +182,16 @@
         <option value="$PROJECT_DIR$/server/src/main/java/com/blazen/server/node/NodeController.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/com/blazen/ServerApplication.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/com/blazen/server/node/Node.java" />
-        <option value="$PROJECT_DIR$/server/src/main/java/com/blazen/server/node/Nodes.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/com/blazen/server/node/INodeRepository.java" />
         <option value="$PROJECT_DIR$/server/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/server/src/main/resources/validations/node.valid" />
+        <option value="$PROJECT_DIR$/server/src/main/resources/validations/node.json" />
+        <option value="$PROJECT_DIR$/server/src/main/java/com/blazen/server/node/NodeId.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/com/blazen/server/controllers/NodeController.java" />
+        <option value="$PROJECT_DIR$/server/src/main/java/com/blazen/server/node/Nodes.java" />
+        <option value="$PROJECT_DIR$/server/src/main/java/com/blazen/server/controllers/api/NodeController.java" />
+        <option value="$PROJECT_DIR$/server/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/server/src/main/java/com/blazen/server/repositories/INodeRepository.java" />
       </list>
     </option>
   </component>
@@ -193,8 +214,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -264,7 +285,44 @@
               <item name="server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blazen" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="com.blazen" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blazen" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="com.blazen" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blazen" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="com.blazen" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blazen" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="node" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -280,11 +338,11 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth0" value="15" />
+    <property name="RequestMappingsPanelWidth1" value="15" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546004944588" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546194518634" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -340,6 +398,34 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
+      <module name="com.blazen.server.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.blazen.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.blazen.ServerApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
+      <module name="com.blazen.server.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.blazen.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.blazen.ServerApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -404,7 +490,7 @@
         <item itemvalue="Spring Boot.ServerApplication" />
         <item itemvalue="Spring Boot.ServerApplication" />
         <item itemvalue="Spring Boot.ServerApplication" />
-        <item itemvalue="Gradle.server [dependencies]" />
+        <item itemvalue="Spring Boot.ServerApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -424,7 +510,9 @@
       <workItem from="1545417300403" duration="2479000" />
       <workItem from="1545478735089" duration="10923000" />
       <workItem from="1545837538903" duration="3843000" />
-      <workItem from="1545921416801" duration="9212000" />
+      <workItem from="1545921416801" duration="10168000" />
+      <workItem from="1546078367255" duration="6234000" />
+      <workItem from="1546180800556" duration="8025000" />
     </task>
     <task id="LOCAL-00001" summary="Gradle">
       <created>1545418191110</created>
@@ -451,12 +539,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26457000" />
+    <option name="totallyTimeSpent" value="41672000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15368196" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15688367" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -483,7 +571,7 @@
       <window_info anchor="bottom" id="ANTLR Preview" order="16" />
       <window_info anchor="bottom" id="Messages" order="17" />
       <window_info anchor="bottom" id="SQL" order="18" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="19" visible="true" weight="0.2693566" />
+      <window_info anchor="bottom" id="Run Dashboard" order="19" visible="true" weight="0.304253" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -535,13 +623,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/src/main/java/com/ServerApplication.java" />
-    <entry file="file://$PROJECT_DIR$/server/src/main/resources/templates/logIn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/gradlew.bat">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -553,20 +634,49 @@
     <entry file="file://$PROJECT_DIR$/server/gradle/wrapper/gradle-wrapper.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/ServerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/ServerApplication.java" />
     <entry file="file://$PROJECT_DIR$/server/settings.gradle">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/build.gradle">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-mongodb/2.1.3.RELEASE/2fca1f1b82d5f3f3275d68a231ae6481facb0952/spring-data-mongodb-2.1.3.RELEASE-sources.jar!/org/springframework/data/mongodb/repository/MongoRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-169">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        <state relative-caret-position="168">
+          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-11-oracle/lib/src.zip!/java.base/java/net/URISyntaxException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-533">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/2.1.3.RELEASE/2fead3014c5e4e0cb750dd2939770d09fb2a21e4/spring-data-commons-2.1.3.RELEASE-sources.jar!/org/springframework/data/domain/Sort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/node/NodeId.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding>
+            <element signature="e#358#359#0" expanded="true" />
+            <element signature="e#389#390#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#508#509#0" expanded="true" />
+            <element signature="e#535#536#0" expanded="true" />
+            <element signature="e#575#576#0" expanded="true" />
+            <element signature="e#607#608#0" expanded="true" />
+            <element signature="e#640#641#0" expanded="true" />
+            <element signature="e#669#670#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="true" />
+            <element signature="e#749#750#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -575,63 +685,90 @@
         <state relative-caret-position="196">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
-            <element signature="e#316#317#0" expanded="true" />
+            <element signature="e#309#310#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/logIn/LogInController.java">
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/controllers/api/NodeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        <state relative-caret-position="268">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/node/Nodes.java">
+    <entry file="file://$PROJECT_DIR$/server/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-264">
+          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/resources/validations/node.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#222#223#0" expanded="true" />
-            <element signature="e#248#249#0" expanded="true" />
-            <element signature="e#288#289#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-            <element signature="e#107#108#0" expanded="true" />
-            <element signature="e#134#135#0" expanded="true" />
-            <element signature="e#174#175#0" expanded="true" />
-            <element signature="e#206#207#0" expanded="true" />
-          </folding>
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/node/INodeRepository.java">
+    <entry file="file://$PROJECT_DIR$/server/src/main/resources/templates/logIn.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        <state relative-caret-position="-590">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/controllers/LogInController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/controllers/NodeController.java">
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/models/Nodes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+        <state relative-caret-position="196">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#411#412#0" expanded="true" />
-            <element signature="e#455#456#0" expanded="true" />
-            <element signature="e#730#731#0" expanded="true" />
-            <element signature="e#773#774#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/repositories/INodeRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/services/Jolka.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/services/node/NodeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
         </state>
       </provider>
     </entry>
