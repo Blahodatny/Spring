@@ -1,6 +1,7 @@
 package com.blazen.server.models.node;
 
 import org.bson.types.ObjectId;
+import org.bson.BsonDateTime;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -45,7 +46,7 @@ public class Node {
     public Node(String name, String parent) {
         this.name = name;
         this.parent = new ObjectId(parent);
-        date = Calendar.getInstance().getTime();
+        date = new Date();
         isDeleted = false;
         isFavourite = false;
     }
