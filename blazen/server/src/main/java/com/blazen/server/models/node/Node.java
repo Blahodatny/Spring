@@ -1,13 +1,8 @@
 package com.blazen.server.models.node;
 
 import org.bson.types.ObjectId;
-import org.bson.BsonDateTime;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.format.annotation.DateTimeFormat;
-
-import java.util.Calendar;
-import java.util.Date;
 
 @Document(collection = "nodes")
 public class Node {
@@ -16,13 +11,10 @@ public class Node {
     private String name;
     private ObjectId parent;
     private String link;
-    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-    private Date date;
     private boolean isFavourite;
     private boolean isDeleted;
 
     public Node() {
-
     }
 
     public Node(String name) {
@@ -38,17 +30,11 @@ public class Node {
                 | java.net.URISyntaxException e) {
             e.printStackTrace();
         }
-        date = Calendar.getInstance().getTime();
-        isDeleted = false;
-        isFavourite = false;
     }
 
     public Node(String name, String parent) {
         this.name = name;
         this.parent = new ObjectId(parent);
-        date = new Date();
-        isDeleted = false;
-        isFavourite = false;
     }
 
     public ObjectId get_id() {
@@ -81,14 +67,6 @@ public class Node {
 
     public void setLink(String link) {
         this.link = link;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
     }
 
     public boolean isFavourite() {
