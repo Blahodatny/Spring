@@ -4,10 +4,7 @@ import com.blazen.server.models.node.Node;
 import com.blazen.server.services.node.INodeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
@@ -22,7 +19,7 @@ public class NodeController {
 
     @PostMapping()
     ResponseEntity<?> newNode(@RequestBody Node node) {
-        var saved = service.addFolder(node);
+        var saved = service.createNode(node);
         return ResponseEntity
                 .created(
                         ServletUriComponentsBuilder
@@ -32,5 +29,12 @@ public class NodeController {
                                 .toUri()
                 )
                 .body(saved);
+    }
+
+    @GetMapping("/{id}")
+    ResponseEntity<?> children(@PathVariable String id) {
+        return ResponseEntity
+                .accepted()
+                .body(service);
     }
 }
