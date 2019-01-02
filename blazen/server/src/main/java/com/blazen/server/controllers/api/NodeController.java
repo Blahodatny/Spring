@@ -1,26 +1,30 @@
 package com.blazen.server.controllers.api;
 
-import com.blazen.server.repositories.INodeRepository;
-import com.blazen.server.models.Nodes;
+import com.blazen.server.models.node.Node;
+import com.blazen.server.services.node.INodeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import java.util.List;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 @RestController
-@RequestMapping("api/v1/node")
+@RequestMapping("api/v1/nodes")
 public class NodeController {
-    private final INodeRepository repository;
+    private final INodeService service;
 
     @Autowired
-    public NodeController(INodeRepository repository) {
-        this.repository = repository;
+    public NodeController(INodeService service) {
+        this.service = service;
     }
 
-    @RequestMapping(method = RequestMethod.GET)
-    public List<Nodes> getAllPets() {
-        return repository.findAll();
+    @PostMapping()
+    ResponseEntity<?> newNode(@RequestBody Node node) throws URISyntaxException {
+//        System.out.println(ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(node.get_id().hashCode()).toUri());
+        return ResponseEntity
+                .created(new URI("blazen.con"))
+                .body(service.addFolder(node));
     }
 }
