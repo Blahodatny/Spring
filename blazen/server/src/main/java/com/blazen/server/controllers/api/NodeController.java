@@ -31,10 +31,10 @@ public class NodeController {
                 .body(saved);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{id}/children")
     ResponseEntity<?> children(@PathVariable String id) {
         return ResponseEntity
                 .accepted()
-                .body(service);
+                .body(service.findNodeChildren(id));
     }
 }
