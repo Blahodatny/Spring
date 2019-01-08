@@ -32,10 +32,10 @@ public class NodeServiceImpl implements INodeService {
                         Aggregation.match(new Criteria("_id").is(new ObjectId(parent))),
                         Aggregation
                                 .graphLookup("nodes")
-                                .startWith("$parent")
-                                .connectFrom("parent")
-                                .connectTo("_id")
-                                .maxDepth(5)
+                                .startWith("$_id")
+                                .connectFrom("_id")
+                                .connectTo("parent")
+                                .maxDepth(3)
                                 .as("children")
                 ),
                 "nodes",

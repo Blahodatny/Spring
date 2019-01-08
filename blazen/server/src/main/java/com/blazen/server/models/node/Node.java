@@ -9,7 +9,7 @@ public class Node {
     @Id
     private ObjectId _id;
     private String name;
-    private String parent;
+    private ObjectId parent;
     private String link;
     private boolean isFavourite;
     private boolean isDeleted;
@@ -23,7 +23,7 @@ public class Node {
 
     public Node(String name, String parent, String link) {
         this.name = name;
-        this.parent = parent;
+        this.parent = new ObjectId(parent);
         try {
             this.link = new java.net.URL(link).toURI().toString();
         } catch (java.net.MalformedURLException
@@ -34,7 +34,7 @@ public class Node {
 
     public Node(String name, String parent) {
         this.name = name;
-        this.parent = parent;
+        this.parent = new ObjectId(parent);
     }
 
     public ObjectId get_id() {
@@ -53,11 +53,11 @@ public class Node {
         this.name = name;
     }
 
-    public String getParent() {
+    public ObjectId getParent() {
         return parent;
     }
 
-    public void setParent(String parent) {
+    public void setParent(ObjectId parent) {
         this.parent = parent;
     }
 
