@@ -35,7 +35,7 @@ public class NodeServiceImpl implements INodeService {
                                 .startWith("$_id")
                                 .connectFrom("_id")
                                 .connectTo("parent")
-                                .maxDepth(3)
+                                .maxDepth(5)
                                 .as("children")
                 ),
                 "nodes",
