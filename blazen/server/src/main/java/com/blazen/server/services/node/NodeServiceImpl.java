@@ -1,5 +1,6 @@
 package com.blazen.server.services.node;
 
+import com.blazen.server.models.node.Children;
 import com.blazen.server.models.node.Node;
 import com.blazen.server.repositories.INodeRepository;
 import org.bson.types.ObjectId;
@@ -26,20 +27,20 @@ public class NodeServiceImpl implements INodeService {
         return repository.save(node);
     }
 
-    public List<Node> findNodeChildren(String parent) {
-        return template.aggregate(
-                Aggregation.newAggregation(
-                        Aggregation.match(new Criteria("_id").is(new ObjectId(parent))),
-                        Aggregation
-                                .graphLookup("nodes")
-                                .startWith("$_id")
-                                .connectFrom("_id")
-                                .connectTo("parent")
-                                .maxDepth(5)
-                                .as("children")
+    public List<Children> findNodeChildren(String parent) {
+        return template.aggregate(Aggregation.newAggregation(
+                Children.class,
+                Aggregation.match(Criteria.where("_id").is(new ObjectId(parent))),
+                Aggregation
+                        .graphLookup("nodes")
+                        .startWith("$_id")
+                        .connectFrom("_id")
+                        .connectTo("parent")
+                        .maxDepth(5)
+                        .as("children")
                 ),
-                "nodes",
-                Node.class
+//                "nodes",
+                Children.class
         ).getMappedResults();
     }
 }

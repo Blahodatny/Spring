@@ -9,8 +9,6 @@ public class Node {
     @Id
     private ObjectId _id;
     private String name;
-    private ObjectId parent;
-    private String link;
     private boolean isFavourite;
     private boolean isDeleted;
 
@@ -21,21 +19,6 @@ public class Node {
         this.name = name;
     }
 
-    public Node(String name, String parent, String link) {
-        this.name = name;
-        this.parent = new ObjectId(parent);
-        try {
-            this.link = new java.net.URL(link).toURI().toString();
-        } catch (java.net.MalformedURLException
-                | java.net.URISyntaxException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public Node(String name, String parent) {
-        this.name = name;
-        this.parent = new ObjectId(parent);
-    }
 
     public ObjectId get_id() {
         return _id;
@@ -51,22 +34,6 @@ public class Node {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public ObjectId getParent() {
-        return parent;
-    }
-
-    public void setParent(ObjectId parent) {
-        this.parent = parent;
-    }
-
-    public String getLink() {
-        return link;
-    }
-
-    public void setLink(String link) {
-        this.link = link;
     }
 
     public boolean isFavourite() {
