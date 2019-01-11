@@ -31,15 +31,16 @@ public class NodeServiceImpl implements INodeService {
         return template.aggregate(Aggregation.newAggregation(
                 Children.class,
                 Aggregation.match(Criteria.where("_id").is(new ObjectId(parent))),
-                Aggregation
-                        .graphLookup("nodes")
-                        .startWith("$_id")
-                        .connectFrom("_id")
-                        .connectTo("parent")
-                        .maxDepth(5)
-                        .as("children")
+//                Aggregation
+//                        .graphLookup("nodes")
+//                        .startWith("$_id")
+//                        .connectFrom("_id")
+//                        .connectTo("parent")
+//                        .maxDepth(0)
+//                        .as("children")
+//                ),
+                Aggregation.lookup("nodes", "_id", "parent", "children")
                 ),
-//                "nodes",
                 Children.class
         ).getMappedResults();
     }

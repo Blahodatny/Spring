@@ -15,10 +15,6 @@ public class Directory extends Node {
         this.parent = new ObjectId(parent);
     }
 
-    Directory(String name) {
-        super(name);
-    }
-
     public ObjectId getParent() {
         return parent;
     }

@@ -9,11 +9,6 @@ public class Children extends Directory {
     public Children() {
     }
 
-    public Children(String name, Directory[] children) {
-        super(name);
-        this.children = children;
-    }
-
     public Children(String name, String parent, Directory[] children) {
         super(name, parent);
         this.children = children;
