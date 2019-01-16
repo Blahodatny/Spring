@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b375d70-5df7-4bd5-a006-35727e633361" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/js/hello.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/blazen/server/controllers/api/NodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/blazen/server/controllers/api/NodeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/blazen/server/services/node/INodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/blazen/server/services/node/interfaces/INodeCRUDService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/blazen/server/services/node/NodeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/blazen/server/services/node/NodeServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/server/.gradle/" />
     <ignored path="$PROJECT_DIR$/server/build/" />
@@ -16,6 +12,20 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$/server">
@@ -45,10 +55,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/controllers/api/NodeController.java">
+        <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/services/node/interfaces/INodeCRUDService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="14" />
+            <state relative-caret-position="224">
+              <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,91 +67,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/models/node/Children.java">
+        <entry file="file://$PROJECT_DIR$/server/src/main/resources/validations/node.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="140">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/repositories/INodeRepository.java">
+        <entry file="file://$PROJECT_DIR$/server/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/models/node/Node.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="784">
-              <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/services/node/interfaces/INodeCRUDService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/services/node/NodeServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="876">
-              <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="28" column="75" lean-forward="true" selection-start-line="28" selection-start-column="75" selection-end-line="28" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/models/node/File.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-              <folding>
-                <element signature="e#400#401#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/models/node/Directory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="196">
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -197,7 +135,6 @@
         <option value="$PROJECT_DIR$/server/src/main/java/com/blazen/server/models/node/Link.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/com/blazen/server/models/node/Parent.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/com/blazen/server/models/node/File.java" />
-        <option value="$PROJECT_DIR$/server/src/main/java/com/blazen/server/models/node/Node.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/com/blazen/server/repositories/INodeRepository.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/com/blazen/server/models/node/Children.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/com/blazen/server/models/node/Directory.java" />
@@ -205,6 +142,7 @@
         <option value="$PROJECT_DIR$/server/src/main/java/com/blazen/server/services/node/interfaces/INodeCRUDService.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/com/blazen/server/services/node/NodeServiceImpl.java" />
         <option value="$PROJECT_DIR$/client/js/hello.js" />
+        <option value="$PROJECT_DIR$/server/src/main/java/com/blazen/server/models/node/Node.java" />
       </list>
     </option>
   </component>
@@ -214,7 +152,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="25" />
     <option name="width" value="1920" />
     <option name="height" value="1055" />
@@ -227,8 +165,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -253,133 +191,6 @@
               <item name="server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="com.blazen" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="com.blazen" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="blazen" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="com.blazen" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="blazen" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="com.blazen" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="blazen" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="com.blazen" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="blazen" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="com.blazen" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="blazen" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="repositories" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="com.blazen" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="blazen" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="com.blazen" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="blazen" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-              <item name="node" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="com.blazen" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="blazen" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-              <item name="node" type="462c0819:PsiDirectoryNode" />
-              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="com.blazen" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="com.blazen" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="com.blazen" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="validations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -628,6 +439,8 @@
       <workItem from="1547400340275" duration="597000" />
       <workItem from="1547548372891" duration="1960000" />
       <workItem from="1547561100105" duration="111000" />
+      <workItem from="1547564277240" duration="5227000" />
+      <workItem from="1547647183167" duration="3071000" />
     </task>
     <task id="LOCAL-00001" summary="Gradle">
       <created>1545418191110</created>
@@ -654,12 +467,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114942000" />
+    <option name="totallyTimeSpent" value="123240000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17289221" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17449306" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -686,14 +499,14 @@
       <window_info anchor="bottom" id="ANTLR Preview" order="16" />
       <window_info anchor="bottom" id="Messages" order="17" />
       <window_info anchor="bottom" id="SQL" order="18" />
-      <window_info anchor="bottom" id="Run Dashboard" order="19" visible="true" weight="0.17339149" />
+      <window_info anchor="bottom" id="Run Dashboard" order="19" visible="true" weight="0.22197309" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" weight="0.32977587" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Database" order="6" weight="0.15795091" />
       <window_info anchor="right" id="Gradle" order="7" weight="0.32977587" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
@@ -805,13 +618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-mongodb/2.1.3.RELEASE/2fca1f1b82d5f3f3275d68a231ae6481facb0952/spring-data-mongodb-2.1.3.RELEASE-sources.jar!/org/springframework/data/mongodb/core/MongoTemplate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="1919" column="54" selection-start-line="1919" selection-start-column="54" selection-end-line="1919" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mongodb/mongodb-driver-core/3.8.2/eef1f5c81fda823c64be366daaa79ffb77bf48fa/mongodb-driver-core-3.8.2-sources.jar!/com/mongodb/client/model/Aggregates.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="563">
@@ -868,27 +674,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/resources/templates/logIn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/resources/validations/node.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/ServerApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -908,20 +693,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/models/node/Node.java">
+    <entry file="file://$PROJECT_DIR$/server/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="784">
-          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="28" column="75" selection-start-line="28" selection-start-column="75" selection-end-line="28" selection-end-column="75" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/services/node/interfaces/INodeCRUDService.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-mongodb/2.1.3.RELEASE/2fca1f1b82d5f3f3275d68a231ae6481facb0952/spring-data-mongodb-2.1.3.RELEASE-sources.jar!/org/springframework/data/mongodb/core/MongoTemplate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        <state relative-caret-position="214">
+          <caret line="154" column="13" selection-start-line="154" selection-start-column="13" selection-end-line="154" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/5.1.3.RELEASE/c5ee0067915517d1660805a11c154e7537da8ea2/spring-context-5.1.3.RELEASE-sources.jar!/org/springframework/stereotype/Service.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/models/node/Directory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -930,18 +726,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/models/node/File.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        <state relative-caret-position="168">
+          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
           <folding>
+            <element signature="e#373#374#0" expanded="true" />
             <element signature="e#400#401#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/models/node/Directory.java">
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/models/node/Children.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        <state relative-caret-position="168">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/models/node/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -950,45 +754,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/services/node/NodeServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="876">
-          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+        <state relative-caret-position="1350">
+          <caret line="45" column="20" lean-forward="true" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#983#984#0" expanded="true" />
+            <element signature="e#1027#1028#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/models/node/Children.java">
+    <entry file="file://$PROJECT_DIR$/server/src/main/resources/templates/logIn.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="28" column="75" lean-forward="true" selection-start-line="28" selection-start-column="75" selection-end-line="28" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/controllers/api/NodeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="387">
+          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/repositories/INodeRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        <state relative-caret-position="196">
+          <caret line="7" column="70" selection-start-line="7" selection-start-column="70" selection-end-line="7" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/controllers/api/NodeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/blazen/server/services/node/interfaces/INodeCRUDService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/resources/validations/node.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
         </state>
       </provider>
     </entry>
