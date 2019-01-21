@@ -1,0 +1,14 @@
+apply plugin: 'java'
+
+group 'com.project'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework:spring-context:5.1.4.RELEASE'
+}
