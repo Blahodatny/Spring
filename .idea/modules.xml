@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/context/annotation/annotation.iml" filepath="$PROJECT_DIR$/context/annotation/annotation.iml" />
-      <module fileurl="file://$PROJECT_DIR$/client/client.iml" filepath="$PROJECT_DIR$/client/client.iml" group="com/project" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.project.context.iml" filepath="$PROJECT_DIR$/.idea/modules/com.project.context.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.project.context.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.project.context.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.project.context.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.project.context.test.iml" />
