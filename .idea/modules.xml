@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/context/annotation/annotation.iml" filepath="$PROJECT_DIR$/context/annotation/annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.project.context.iml" filepath="$PROJECT_DIR$/.idea/modules/com.project.context.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.project.context.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.project.context.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.project.context.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.project.context.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/context/java/java.iml" filepath="$PROJECT_DIR$/context/java/java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/context/xml/xml.iml" filepath="$PROJECT_DIR$/context/xml/xml.iml" />
+    </modules>
+  </component>
+</project>
