@@ -10,5 +10,5 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework:spring-context:5.1.4.RELEASE'
+    compileOnly 'org.springframework:spring-context:5.1.5.RELEASE'
 }

@@ -6,6 +6,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.project.context.iml" filepath="$PROJECT_DIR$/.idea/modules/com.project.context.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.project.context.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.project.context.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.project.context.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.project.context.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.project.server.iml" filepath="$PROJECT_DIR$/.idea/modules/com.project.server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.project.server.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.project.server.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.project.server.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.project.server.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/context/java/java.iml" filepath="$PROJECT_DIR$/context/java/java.iml" />
       <module fileurl="file://$PROJECT_DIR$/context/xml/xml.iml" filepath="$PROJECT_DIR$/context/xml/xml.iml" />
     </modules>

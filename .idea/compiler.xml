@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="com.project.context.main" target="11" />
       <module name="com.project.context.test" target="11" />
+      <module name="com.project.server.main" target="1.8" />
+      <module name="com.project.server.test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
