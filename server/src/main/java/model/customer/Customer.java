@@ -52,7 +52,7 @@ public class Customer extends Address implements Serializable {
                 Objects.equals(first_name, customer.first_name) &&
                 Objects.equals(last_name, customer.last_name);
     }
-    
+
     public int hashCode() {
         return Objects.hash(_id, phone, city, street, first_name, last_name);
     }
