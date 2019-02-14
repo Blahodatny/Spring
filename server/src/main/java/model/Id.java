@@ -2,10 +2,11 @@ package model;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.MappedSuperclass;
+import java.io.Serializable;
 
 @MappedSuperclass
-abstract class Id {
-    Long _id;
+public abstract class Id implements Serializable {
+    protected Long _id;
 
     @javax.persistence.Id
     @GeneratedValue
