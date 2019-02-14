@@ -1,23 +1,21 @@
 package model.customer;
 
-import model.Id;
-
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
+import java.io.Serializable;
 
 @MappedSuperclass
-public class Address extends Id {
-    private String street;
-    private String city;
+public class Address extends Phone implements Serializable {
+    String city;
+    String street;
 
-    @Basic
-    @Column(name = "street", length = 50)
-    public String getStreet() {
-        return street;
+    Address() {
     }
 
-    public void setStreet(String street) {
+    Address(String phone, String city, String street) {
+        super(phone);
+        this.city = city;
         this.street = street;
     }
 
@@ -29,5 +27,15 @@ public class Address extends Id {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    @Basic
+    @Column(name = "street", length = 50)
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
     }
 }
