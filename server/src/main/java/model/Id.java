@@ -1,4 +1,4 @@
-package models;
+package model;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.MappedSuperclass;
