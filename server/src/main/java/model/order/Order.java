@@ -4,6 +4,9 @@ import model.customer.Customer;
 import model.order.item.OrderItem;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.util.Collection;
 import java.util.Objects;
@@ -36,5 +39,22 @@ public class Order extends Address {
         return Objects.hash(_id, created_at, updated_at, to_city, to_street);
     }
 
+    @OneToMany(mappedBy = "order")
+    public Collection<OrderItem> getItems() {
+        return items;
+    }
 
+    public void setItems(Collection<OrderItem> items) {
+        this.items = items;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "_id")
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
 }
