@@ -2,11 +2,12 @@ package model.customer;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
+import javax.persistence.FetchType;
 import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
 
 @MappedSuperclass
-public class Address extends Phone implements Serializable {
+abstract class Address extends Phone implements Serializable {
     String city;
     String street;
 
@@ -19,7 +20,7 @@ public class Address extends Phone implements Serializable {
         this.street = street;
     }
 
-    @Basic
+    @Basic(fetch = FetchType.LAZY)
     @Column(name = "city", nullable = false, length = 20)
     public String getCity() {
         return city;
@@ -29,7 +30,7 @@ public class Address extends Phone implements Serializable {
         this.city = city;
     }
 
-    @Basic
+    @Basic(fetch = FetchType.LAZY)
     @Column(name = "street", length = 50)
     public String getStreet() {
         return street;

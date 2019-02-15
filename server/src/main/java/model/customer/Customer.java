@@ -1,10 +1,14 @@
 package model.customer;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
+import model.order.Order;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.OneToMany;
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -12,6 +16,7 @@ import java.util.Objects;
 public class Customer extends Address implements Serializable {
     private String first_name;
     private String last_name;
+    private Collection<Order> ordersById;
 
     public Customer() {
     }
@@ -46,7 +51,8 @@ public class Customer extends Address implements Serializable {
         if (this == o) return true;
         if (!(o instanceof Customer)) return false;
         var customer = (Customer) o;
-        return Objects.equals(phone, customer.phone) &&
+        return Objects.equals(_id, customer._id) &&
+                Objects.equals(phone, customer.phone) &&
                 Objects.equals(city, customer.city) &&
                 Objects.equals(street, customer.street) &&
                 Objects.equals(first_name, customer.first_name) &&
@@ -55,5 +61,14 @@ public class Customer extends Address implements Serializable {
 
     public int hashCode() {
         return Objects.hash(_id, phone, city, street, first_name, last_name);
+    }
+
+    @OneToMany(mappedBy = "getCustomerById")
+    public Collection<Order> getOrdersById() {
+        return ordersById;
+    }
+
+    public void setOrdersById(Collection<Order> ordersById) {
+        this.ordersById = ordersById;
     }
 }

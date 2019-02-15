@@ -9,7 +9,7 @@ import javax.validation.constraints.Size;
 import java.io.Serializable;
 
 @MappedSuperclass
-public class Phone extends Id implements Serializable {
+abstract class Phone extends Id implements Serializable {
     String phone;
 
     Phone() {
