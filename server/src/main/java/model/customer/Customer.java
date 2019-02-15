@@ -7,16 +7,15 @@ import javax.persistence.Table;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.OneToMany;
-import java.io.Serializable;
 import java.util.Collection;
 import java.util.Objects;
 
 @Entity
 @Table(name = "CUSTOMERS", catalog = "Boot", schema = "public")
-public class Customer extends Address implements Serializable {
+public class Customer extends Address {
     private String first_name;
     private String last_name;
-    private Collection<Order> ordersById;
+    private Collection<Order> orders;
 
     public Customer() {
     }
@@ -63,12 +62,12 @@ public class Customer extends Address implements Serializable {
         return Objects.hash(_id, phone, city, street, first_name, last_name);
     }
 
-    @OneToMany(mappedBy = "getCustomerById")
-    public Collection<Order> getOrdersById() {
-        return ordersById;
+    @OneToMany(mappedBy = "customer")
+    public Collection<Order> getOrders() {
+        return orders;
     }
 
-    public void setOrdersById(Collection<Order> ordersById) {
-        this.ordersById = ordersById;
+    public void setOrders(Collection<Order> orders) {
+        this.orders = orders;
     }
 }

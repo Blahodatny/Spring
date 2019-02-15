@@ -9,14 +9,13 @@ import javax.persistence.EntityListeners;
 import javax.persistence.Temporal;
 import javax.persistence.Column;
 import javax.persistence.TemporalType;
-import java.io.Serializable;
 import java.util.Date;
 
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-abstract class Audit implements Serializable {
-    Date created_at;
-    Date updated_at;
+public abstract class Audit extends Id {
+    protected Date created_at;
+    protected Date updated_at;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "created_at", nullable = false, updatable = false)

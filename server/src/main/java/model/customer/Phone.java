@@ -6,10 +6,9 @@ import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 import javax.validation.constraints.Size;
-import java.io.Serializable;
 
 @MappedSuperclass
-abstract class Phone extends Id implements Serializable {
+abstract class Phone extends Id {
     String phone;
 
     Phone() {

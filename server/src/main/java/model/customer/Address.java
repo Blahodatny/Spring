@@ -4,10 +4,9 @@ import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.FetchType;
 import javax.persistence.MappedSuperclass;
-import java.io.Serializable;
 
 @MappedSuperclass
-abstract class Address extends Phone implements Serializable {
+abstract class Address extends Phone {
     String city;
     String street;
 
