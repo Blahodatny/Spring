@@ -1,7 +1,5 @@
 package model.customer;
 
-import model.Id;
-
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.FetchType;
@@ -11,6 +9,9 @@ import javax.persistence.MappedSuperclass;
 abstract class Address extends Phone {
     String city;
     String street;
+
+    Address() {
+    }
 
     Address(String phone, String city, String street) {
         super(phone);

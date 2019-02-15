@@ -11,6 +11,9 @@ import javax.validation.constraints.Size;
 abstract class Phone extends Id {
     String phone;
 
+    Phone() {
+    }
+
     Phone(String phone) {
         this.phone = phone;
     }

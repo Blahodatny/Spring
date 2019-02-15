@@ -7,7 +7,6 @@ import javax.persistence.Table;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.OneToMany;
-import javax.validation.constraints.Size;
 import java.util.Collection;
 import java.util.Objects;
 
@@ -17,6 +16,9 @@ public class Customer extends Address {
     private String first_name;
     private String last_name;
     private Collection<Order> orders;
+
+    public Customer() {
+    }
 
     public Customer(String phone, String city, String street, String first_name, String last_name) {
         super(phone, city, street);
