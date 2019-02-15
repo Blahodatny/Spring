@@ -14,20 +14,14 @@ import java.util.Objects;
 @Entity
 @Table(name = "CUSTOMERS", catalog = "Boot", schema = "public")
 public class Customer extends Address {
-    private String phone;
     private String first_name;
     private String last_name;
     private Collection<Order> orders;
 
-    @Basic
-    @Size(min = 10, max = 30)
-    @Column(name = "phone", unique = true, nullable = false)
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public Customer(String phone, String city, String street, String first_name, String last_name) {
+        super(phone, city, street);
+        this.first_name = first_name;
+        this.last_name = last_name;
     }
 
     @Basic

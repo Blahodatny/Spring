@@ -8,9 +8,15 @@ import javax.persistence.FetchType;
 import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
-abstract class Address extends Id {
+abstract class Address extends Phone {
     String city;
     String street;
+
+    Address(String phone, String city, String street) {
+        super(phone);
+        this.city = city;
+        this.street = street;
+    }
 
     @Basic(fetch = FetchType.LAZY)
     @Column(name = "city", nullable = false, length = 20)
