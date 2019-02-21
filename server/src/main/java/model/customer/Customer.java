@@ -4,6 +4,7 @@ import model.order.Order;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.OneToMany;
@@ -11,7 +12,15 @@ import java.util.Collection;
 import java.util.Objects;
 
 @Entity
-@Table(name = "CUSTOMERS", catalog = "Boot", schema = "public")
+@Table(
+        name = "CUSTOMERS",
+        catalog = "Boot",
+        schema = "public",
+        uniqueConstraints = @UniqueConstraint(
+                name = "phone_uindex",
+                columnNames = "phone"
+        )
+)
 public class Customer extends Address {
     private String first_name;
     private String last_name;

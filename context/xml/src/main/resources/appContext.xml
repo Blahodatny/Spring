@@ -7,8 +7,8 @@
           class="xml.HibernateCustomerRepositoryImpl"/>
 
     <bean name="customerService"
-          class="xml.CustomerServiceImpl">
-        <property name="customerRepository" ref="customerRepository"/> <!--for setter injection-->
+          class="xml.CustomerServiceImpl" autowire="constructor">
+        <!--<property name="customerRepository" ref="customerRepository"/> &lt;!&ndash;for setter injection&ndash;&gt;-->
         <!--<constructor-arg index="0" ref="customerRepository"/>--> <!--for constructor injection-->
     </bean>
 </beans>
