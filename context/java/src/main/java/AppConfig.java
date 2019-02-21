@@ -16,7 +16,7 @@ public class AppConfig {
     }
 
     @Bean(name = "customerRepository")
-    public CustomerRepository getCustomerRepository() {
+    CustomerRepository getCustomerRepository() {
         return new HibernateCustomerRepositoryImpl();
     }
 }
