@@ -5,8 +5,6 @@ import model.order.Order;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
-import javax.persistence.Basic;
-import javax.persistence.Column;
 import javax.persistence.OneToMany;
 import javax.persistence.CascadeType;
 import java.util.Collection;
@@ -22,38 +20,15 @@ import java.util.Objects;
                 columnNames = "phone"
         )
 )
-public class Customer extends Address {
-    private String firstName;
-    private String lastName;
+public class Customer extends Name {
     private Collection<Order> orders;
 
     public Customer() {
     }
 
-    public Customer(String phone, String city, String street, String firstName, String lastName) {
-        super(phone, city, street);
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-
-    @Basic
-    @Column(name = "first_name", nullable = false, length = 40)
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    @Basic
-    @Column(name = "last_name", nullable = false, length = 40)
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public Customer(String phone, String city, String street,
+                    String firstName, String lastName) {
+        super(phone, city, street, firstName, lastName);
     }
 
     public boolean equals(Object o) {
@@ -72,7 +47,11 @@ public class Customer extends Address {
         return Objects.hash(id, phone, city, street, firstName, lastName);
     }
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "customer", orphanRemoval = true)
+    @OneToMany(
+            cascade = CascadeType.ALL,
+            mappedBy = "customer",
+            orphanRemoval = true
+    )
     public Collection<Order> getOrders() {
         return orders;
     }

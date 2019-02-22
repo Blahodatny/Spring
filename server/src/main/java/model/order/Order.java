@@ -49,7 +49,7 @@ public class Order extends Address {
     }
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "customer_id", referencedColumnName = "id", nullable = false)
     public Customer getCustomer() {
         return customer;
     }

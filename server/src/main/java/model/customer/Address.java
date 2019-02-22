@@ -1,9 +1,9 @@
 package model.customer;
 
+import javax.persistence.MappedSuperclass;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.FetchType;
-import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
 abstract class Address extends Phone {

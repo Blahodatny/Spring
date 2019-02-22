@@ -2,9 +2,9 @@ package model.order;
 
 import model.Audit;
 
+import javax.persistence.MappedSuperclass;
 import javax.persistence.Basic;
 import javax.persistence.Column;
-import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
 abstract class Address extends Audit {

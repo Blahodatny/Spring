@@ -1,8 +1,8 @@
 package model;
 
+import javax.persistence.MappedSuperclass;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
 
 @MappedSuperclass
