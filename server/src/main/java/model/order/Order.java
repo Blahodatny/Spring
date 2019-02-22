@@ -20,23 +20,23 @@ public class Order extends Address {
     public Order() {
     }
 
-    public Order(String to_city, String to_street) {
-        super(to_city, to_street);
+    public Order(String toCity, String toStreet) {
+        super(toCity, toStreet);
     }
 
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Order)) return false;
         var order = (Order) o;
-        return Objects.equals(_id, order._id) &&
-                Objects.equals(created_at, order.created_at) &&
-                Objects.equals(updated_at, order.updated_at) &&
-                Objects.equals(to_city, order.to_city) &&
-                Objects.equals(to_street, order.to_street);
+        return Objects.equals(id, order.id) &&
+                Objects.equals(createdAt, order.createdAt) &&
+                Objects.equals(updatedAt, order.updatedAt) &&
+                Objects.equals(toCity, order.toCity) &&
+                Objects.equals(toStreet, order.toStreet);
     }
 
     public int hashCode() {
-        return Objects.hash(_id, created_at, updated_at, to_city, to_street);
+        return Objects.hash(id, createdAt, updatedAt, toCity, toStreet);
     }
 
     @OneToMany(mappedBy = "order")
@@ -49,7 +49,7 @@ public class Order extends Address {
     }
 
     @ManyToOne
-    @JoinColumn(name = "_id")
+    @JoinColumn(name = "id")
     public Customer getCustomer() {
         return customer;
     }

@@ -8,34 +8,34 @@ import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
 abstract class Address extends Audit {
-    String to_city;
-    String to_street;
+    String toCity;
+    String toStreet;
 
     Address() {
     }
 
-    Address(String to_city, String to_street) {
-        this.to_city = to_city;
-        this.to_street = to_street;
+    Address(String toCity, String toStreet) {
+        this.toCity = toCity;
+        this.toStreet = toStreet;
     }
 
     @Basic
     @Column(name = "to_city", nullable = false, length = 20)
-    public String getTo_city() {
-        return to_city;
+    public String getToCity() {
+        return toCity;
     }
 
-    public void setTo_city(String to_city) {
-        this.to_city = to_city;
+    public void setToCity(String toCity) {
+        this.toCity = toCity;
     }
 
     @Basic
     @Column(name = "to_street", nullable = false, length = 50)
-    public String getTo_street() {
-        return to_street;
+    public String getToStreet() {
+        return toStreet;
     }
 
-    public void setTo_street(String to_street) {
-        this.to_street = to_street;
+    public void setToStreet(String toStreet) {
+        this.toStreet = toStreet;
     }
 }

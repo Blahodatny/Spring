@@ -8,6 +8,7 @@ import javax.persistence.UniqueConstraint;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.OneToMany;
+import javax.persistence.CascadeType;
 import java.util.Collection;
 import java.util.Objects;
 
@@ -22,56 +23,56 @@ import java.util.Objects;
         )
 )
 public class Customer extends Address {
-    private String first_name;
-    private String last_name;
+    private String firstName;
+    private String lastName;
     private Collection<Order> orders;
 
     public Customer() {
     }
 
-    public Customer(String phone, String city, String street, String first_name, String last_name) {
+    public Customer(String phone, String city, String street, String firstName, String lastName) {
         super(phone, city, street);
-        this.first_name = first_name;
-        this.last_name = last_name;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     @Basic
     @Column(name = "first_name", nullable = false, length = 40)
-    public String getFirst_name() {
-        return first_name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     @Basic
     @Column(name = "last_name", nullable = false, length = 40)
-    public String getLast_name() {
-        return last_name;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Customer)) return false;
         var customer = (Customer) o;
-        return Objects.equals(_id, customer._id) &&
+        return Objects.equals(id, customer.id) &&
                 Objects.equals(phone, customer.phone) &&
                 Objects.equals(city, customer.city) &&
                 Objects.equals(street, customer.street) &&
-                Objects.equals(first_name, customer.first_name) &&
-                Objects.equals(last_name, customer.last_name);
+                Objects.equals(firstName, customer.firstName) &&
+                Objects.equals(lastName, customer.lastName);
     }
 
     public int hashCode() {
-        return Objects.hash(_id, phone, city, street, first_name, last_name);
+        return Objects.hash(id, phone, city, street, firstName, lastName);
     }
 
-    @OneToMany(mappedBy = "customer")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "customer", orphanRemoval = true)
     public Collection<Order> getOrders() {
         return orders;
     }
