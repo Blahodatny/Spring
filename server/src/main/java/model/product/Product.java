@@ -1,38 +1,21 @@
 package model.product;
 
-import model.Audit;
 import model.order.item.OrderItem;
 
-import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import javax.persistence.CascadeType;
 import java.util.Collection;
 import java.util.Objects;
 
 @Entity
 @Table(name = "PRODUCTS", catalog = "Boot", schema = "public")
-public class Product extends Audit {
-    private String name;
-    private String type;
+public class Product extends Data {
     private Collection<OrderItem> items;
 
     public Product(String name, String type) {
         this.name = name;
-        this.type = type;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
         this.type = type;
     }
 
@@ -48,9 +31,19 @@ public class Product extends Audit {
     }
 
     public int hashCode() {
-        return Objects.hash(id, createdAt, updatedAt, name, type, items);
+        return Objects.hash(id, createdAt, updatedAt, name, type);
     }
 
+    @OneToMany(
+            cascade = {
+                    CascadeType.PERSIST,
+                    CascadeType.MERGE,
+                    CascadeType.REFRESH,
+                    CascadeType.DETACH
+            },
+            mappedBy = "product",
+            orphanRemoval = true
+    )
     public Collection<OrderItem> getItems() {
         return items;
     }
