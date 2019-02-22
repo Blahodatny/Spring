@@ -3,14 +3,12 @@ package model.customer;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Basic;
 import javax.persistence.Column;
+import javax.validation.constraints.NotEmpty;
 
 @MappedSuperclass
 abstract class Name extends Address {
     String firstName;
     String lastName;
-
-    Name() {
-    }
 
     Name(String phone, String city, String street, String firstName, String lastName) {
         super(phone, city, street);
@@ -19,7 +17,8 @@ abstract class Name extends Address {
     }
 
     @Basic
-    @Column(name = "first_name", nullable = false, length = 40)
+    @NotEmpty
+    @Column(name = "first_name", length = 40)
     public String getFirstName() {
         return firstName;
     }
@@ -29,7 +28,8 @@ abstract class Name extends Address {
     }
 
     @Basic
-    @Column(name = "last_name", nullable = false, length = 40)
+    @NotEmpty
+    @Column(name = "last_name", length = 40)
     public String getLastName() {
         return lastName;
     }

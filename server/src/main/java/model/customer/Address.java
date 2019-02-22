@@ -4,14 +4,12 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.FetchType;
+import javax.validation.constraints.NotEmpty;
 
 @MappedSuperclass
 abstract class Address extends Phone {
     String city;
     String street;
-
-    Address() {
-    }
 
     Address(String phone, String city, String street) {
         super(phone);
@@ -20,7 +18,8 @@ abstract class Address extends Phone {
     }
 
     @Basic(fetch = FetchType.LAZY)
-    @Column(name = "city", nullable = false, length = 20)
+    @NotEmpty
+    @Column(name = "city", length = 20)
     public String getCity() {
         return city;
     }

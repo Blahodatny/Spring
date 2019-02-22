@@ -11,16 +11,13 @@ import javax.validation.constraints.Size;
 abstract class Phone extends Id {
     String phone;
 
-    Phone() {
-    }
-
     Phone(String phone) {
         this.phone = phone;
     }
 
     @Basic
     @Size(min = 10, max = 30)
-    @Column(name = "phone", unique = true, nullable = false)
+    @Column(name = "phone", unique = true)
     public String getPhone() {
         return phone;
     }

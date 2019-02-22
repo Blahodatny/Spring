@@ -5,14 +5,12 @@ import model.Audit;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Basic;
 import javax.persistence.Column;
+import javax.validation.constraints.NotEmpty;
 
 @MappedSuperclass
 abstract class Address extends Audit {
     String toCity;
     String toStreet;
-
-    Address() {
-    }
 
     Address(String toCity, String toStreet) {
         this.toCity = toCity;
@@ -20,7 +18,8 @@ abstract class Address extends Audit {
     }
 
     @Basic
-    @Column(name = "to_city", nullable = false, length = 20)
+    @NotEmpty
+    @Column(name = "to_city", length = 20)
     public String getToCity() {
         return toCity;
     }
@@ -30,7 +29,8 @@ abstract class Address extends Audit {
     }
 
     @Basic
-    @Column(name = "to_street", nullable = false, length = 50)
+    @NotEmpty
+    @Column(name = "to_street", length = 50)
     public String getToStreet() {
         return toStreet;
     }
