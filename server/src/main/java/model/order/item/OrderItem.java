@@ -25,17 +25,19 @@ public class OrderItem extends Quantity {
         if (!(o instanceof OrderItem)) return false;
         var orderItem = (OrderItem) o;
         return Objects.equals(id, orderItem.id) &&
-                quantity == orderItem.quantity &&
-                Objects.equals(order, orderItem.order) &&
-                Objects.equals(product, orderItem.product);
+                quantity == orderItem.quantity;
     }
 
     public int hashCode() {
-        return Objects.hash(id, quantity, order, product);
+        return Objects.hash(id, quantity);
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "order_id", referencedColumnName = "id", nullable = false)
+    @JoinColumn(
+            name = "order_id",
+            referencedColumnName = "id",
+            nullable = false
+    )
     public Order getOrder() {
         return order;
     }
@@ -45,7 +47,11 @@ public class OrderItem extends Quantity {
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "product_id", referencedColumnName = "id", nullable = false)
+    @JoinColumn(
+            name = "product_id",
+            referencedColumnName = "id",
+            nullable = false
+    )
     public Product getProduct() {
         return product;
     }

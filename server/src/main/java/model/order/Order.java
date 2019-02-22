@@ -53,7 +53,11 @@ public class Order extends Address {
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "customer_id", referencedColumnName = "id", nullable = false)
+    @JoinColumn(
+            name = "customer_id",
+            referencedColumnName = "id",
+            nullable = false
+    )
     public Customer getCustomer() {
         return customer;
     }
