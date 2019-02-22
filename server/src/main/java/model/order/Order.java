@@ -20,7 +20,8 @@ public class Order extends Address {
     private Customer customer;
 
     public Order(String toCity, String toStreet) {
-        super(toCity, toStreet);
+        this.toCity = toCity;
+        this.toStreet = toStreet;
     }
 
     public boolean equals(Object o) {

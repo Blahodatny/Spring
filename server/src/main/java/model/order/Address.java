@@ -12,11 +12,6 @@ abstract class Address extends Audit {
     String toCity;
     String toStreet;
 
-    Address(String toCity, String toStreet) {
-        this.toCity = toCity;
-        this.toStreet = toStreet;
-    }
-
     @Basic
     @NotEmpty
     @Column(name = "to_city", length = 20)

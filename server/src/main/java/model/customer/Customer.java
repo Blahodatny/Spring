@@ -25,7 +25,11 @@ public class Customer extends Name {
 
     public Customer(String phone, String city, String street,
                     String firstName, String lastName) {
-        super(phone, city, street, firstName, lastName);
+        this.phone = phone;
+        this.city = city;
+        this.street = street;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     public boolean equals(Object o) {
