@@ -4,10 +4,12 @@ import model.customer.Customer;
 import model.order.item.OrderItem;
 
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.JoinColumn;
+import javax.persistence.FetchType;
+import javax.persistence.CascadeType;
 import java.util.Collection;
 import java.util.Objects;
 
@@ -39,7 +41,11 @@ public class Order extends Address {
         return Objects.hash(id, createdAt, updatedAt, toCity, toStreet);
     }
 
-    @OneToMany(mappedBy = "order")
+    @OneToMany(
+            cascade = CascadeType.ALL,
+            mappedBy = "order",
+            orphanRemoval = true
+    )
     public Collection<OrderItem> getItems() {
         return items;
     }
@@ -48,7 +54,7 @@ public class Order extends Address {
         this.items = items;
     }
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "customer_id", referencedColumnName = "id", nullable = false)
     public Customer getCustomer() {
         return customer;

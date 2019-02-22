@@ -1,15 +1,16 @@
 package model.customer;
 
+import javax.persistence.MappedSuperclass;
 import javax.persistence.Basic;
 import javax.persistence.Column;
-import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
-abstract class Name extends Address{
+abstract class Name extends Address {
     String firstName;
     String lastName;
 
-    Name() {}
+    Name() {
+    }
 
     Name(String phone, String city, String street, String firstName, String lastName) {
         super(phone, city, street);
