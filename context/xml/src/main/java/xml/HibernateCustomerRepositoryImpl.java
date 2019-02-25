@@ -1,8 +1,8 @@
 package xml;
 
-import model.Customer;
+import com.project.model.Customer;
 import org.springframework.beans.factory.annotation.Value;
-import repository.CustomerRepository;
+import com.project.repository.CustomerRepository;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,8 +1,8 @@
 package xml;
 
-import model.Customer;
-import repository.CustomerRepository;
-import service.CustomerService;
+import com.project.model.Customer;
+import com.project.repository.CustomerRepository;
+import com.project.service.CustomerService;
 
 import java.util.List;
 

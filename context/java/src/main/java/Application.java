@@ -1,6 +1,6 @@
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import service.CustomerService;
+import com.project.service.CustomerService;
 
 class Application {
     public static void main(String[] args) {

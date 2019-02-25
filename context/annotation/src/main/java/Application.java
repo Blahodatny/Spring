@@ -1,5 +1,5 @@
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import service.CustomerService;
+import com.project.service.CustomerService;
 
 class Application {
     public static void main(String[] args) {

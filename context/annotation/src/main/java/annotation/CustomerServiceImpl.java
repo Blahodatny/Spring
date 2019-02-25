@@ -1,10 +1,10 @@
 package annotation;
 
-import model.Customer;
+import com.project.model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.CustomerRepository;
-import service.CustomerService;
+import com.project.repository.CustomerRepository;
+import com.project.service.CustomerService;
 
 import java.util.List;
 
