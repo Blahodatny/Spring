@@ -7,9 +7,6 @@ import org.springframework.stereotype.Component;
 import repository.CustomerRepository;
 
 import java.util.Collection;
-import java.util.List;
-import java.util.function.Consumer;
-import java.util.function.Supplier;
 
 @Component
 public class CustomerDAO {
@@ -28,9 +25,14 @@ public class CustomerDAO {
         repository.deleteById(id);
     }
 
-    public Customer update(Long id, List<Consumer> list) {
-        var customer = getById(id);
-        
+    public Customer update(Long id, Customer customer) {
+        var entity = getById(id);
+        entity.setPhone(customer.getPhone());
+        entity.setCity(customer.getCity());
+        entity.setStreet(customer.getStreet());
+        entity.setFirstName(customer.getFirstName());
+        entity.setLastName(customer.getLastName());
+        return repository.save(entity);
     }
 
     public Collection<Customer> getAll() {

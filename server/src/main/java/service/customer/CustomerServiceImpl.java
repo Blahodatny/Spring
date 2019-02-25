@@ -24,6 +24,10 @@ public class CustomerServiceImpl implements CustomerService {
         dao.delete(id);
     }
 
+    public Customer update(Long id, Customer customer) {
+        return dao.update(id, customer);
+    }
+
     public Collection<Customer> getAll() {
         return dao.getAll();
     }
