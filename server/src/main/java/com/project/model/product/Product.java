@@ -14,6 +14,9 @@ import java.util.Objects;
 public class Product extends Data {
     private Collection<OrderItem> items;
 
+    public Product() {
+    }
+
     public Product(String name, String type) {
         this.name = name;
         this.type = type;

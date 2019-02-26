@@ -19,6 +19,9 @@ public class Order extends Address {
     private Collection<OrderItem> items;
     private Customer customer;
 
+    public Order() {
+    }
+
     public Order(String toCity, String toStreet) {
         this.toCity = toCity;
         this.toStreet = toStreet;

@@ -23,6 +23,9 @@ import java.util.Objects;
 public class Customer extends Name {
     private Collection<Order> orders;
 
+    public Customer() {
+    }
+
     public Customer(String phone, String city, String street,
                     String firstName, String lastName) {
         this.phone = phone;

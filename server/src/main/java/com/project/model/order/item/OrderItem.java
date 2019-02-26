@@ -16,6 +16,9 @@ public class OrderItem extends Quantity {
     private Order order;
     private Product product;
 
+    public OrderItem() {
+    }
+
     public OrderItem(int quantity) {
         this.quantity = quantity;
     }
