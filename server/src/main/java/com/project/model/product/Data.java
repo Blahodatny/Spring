@@ -3,7 +3,6 @@ package com.project.model.product;
 import com.project.model.Audit;
 
 import javax.persistence.MappedSuperclass;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.validation.constraints.NotEmpty;
 
@@ -12,7 +11,6 @@ abstract class Data extends Audit {
     String name;
     String type;
 
-    @Basic
     @NotEmpty
     @Column(name = "name", length = 50)
     public String getName() {
@@ -23,7 +21,6 @@ abstract class Data extends Audit {
         this.name = name;
     }
 
-    @Basic
     @NotEmpty
     @Column(name = "type", length = 50)
     public String getType() {

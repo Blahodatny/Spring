@@ -1,7 +1,6 @@
 package com.project.model.customer;
 
 import javax.persistence.MappedSuperclass;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.validation.constraints.NotEmpty;
 
@@ -10,7 +9,6 @@ abstract class Name extends Address {
     String firstName;
     String lastName;
 
-    @Basic
     @NotEmpty
     @Column(name = "first_name", length = 40)
     public String getFirstName() {
@@ -21,7 +19,6 @@ abstract class Name extends Address {
         this.firstName = firstName;
     }
 
-    @Basic
     @NotEmpty
     @Column(name = "last_name", length = 40)
     public String getLastName() {

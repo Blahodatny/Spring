@@ -2,7 +2,6 @@ package com.project.model.order.item;
 
 import com.project.model.Id;
 
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 import javax.validation.constraints.Positive;
@@ -11,7 +10,6 @@ import javax.validation.constraints.Positive;
 abstract class Quantity extends Id {
     int quantity;
 
-    @Basic
     @Positive
     @Column(name = "quantity")
     public int getQuantity() {
