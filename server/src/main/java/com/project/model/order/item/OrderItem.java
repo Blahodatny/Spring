@@ -24,8 +24,12 @@ public class OrderItem extends Quantity {
     }
 
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof OrderItem)) return false;
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof OrderItem)) {
+            return false;
+        }
         var orderItem = (OrderItem) o;
         return Objects.equals(id, orderItem.id) &&
                 quantity == orderItem.quantity;

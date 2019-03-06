@@ -1,13 +1,13 @@
 package com.project.model.order.item;
 
-import com.project.model.Id;
+import com.project.model.EntityId;
 
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 import javax.validation.constraints.Positive;
 
 @MappedSuperclass
-abstract class Quantity extends Id {
+abstract class Quantity extends EntityId {
     int quantity;
 
     @Positive

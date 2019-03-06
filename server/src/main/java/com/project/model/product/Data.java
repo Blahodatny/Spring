@@ -1,13 +1,13 @@
 package com.project.model.product;
 
-import com.project.model.Audit;
+import com.project.model.EntityAuditing;
 
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Column;
 import javax.validation.constraints.NotEmpty;
 
 @MappedSuperclass
-abstract class Data extends Audit {
+abstract class Data extends EntityAuditing {
     String name;
     String type;
 

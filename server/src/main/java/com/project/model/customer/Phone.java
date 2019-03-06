@@ -1,13 +1,13 @@
 package com.project.model.customer;
 
-import com.project.model.Id;
+import com.project.model.EntityId;
 
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Column;
 import javax.validation.constraints.Size;
 
 @MappedSuperclass
-abstract class Phone extends Id {
+abstract class Phone extends EntityId {
     String phone;
 
     @Size(min = 10, max = 30)

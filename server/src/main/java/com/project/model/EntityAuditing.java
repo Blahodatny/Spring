@@ -13,7 +13,7 @@ import java.util.Date;
 
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-public abstract class Audit extends Id {
+public abstract class EntityAuditing extends EntityId {
     protected Date createdAt;
     protected Date updatedAt;
 

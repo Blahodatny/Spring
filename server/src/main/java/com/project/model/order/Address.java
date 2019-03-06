@@ -1,13 +1,13 @@
 package com.project.model.order;
 
-import com.project.model.Audit;
+import com.project.model.EntityAuditing;
 
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Column;
 import javax.validation.constraints.NotEmpty;
 
 @MappedSuperclass
-abstract class Address extends Audit {
+abstract class Address extends EntityAuditing {
     String toCity;
     String toStreet;
 

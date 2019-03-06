@@ -63,4 +63,12 @@ public class Customer extends Name {
     public void setOrders(Collection<Order> orders) {
         this.orders = orders;
     }
+
+    public void updateWith(Customer customer) {
+        setPhone(customer.getPhone());
+        setCity(customer.getCity());
+        setStreet(customer.getStreet());
+        setFirstName(customer.getFirstName());
+        setLastName(customer.getLastName());
+    }
 }
