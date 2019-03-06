@@ -3,8 +3,11 @@ package com.project.repository.dao;
 import com.project.exception.ResourceNotFoundException;
 import com.project.model.customer.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import com.project.repository.CustomerRepository;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Collection;
 
@@ -17,12 +20,25 @@ public class CustomerDAO {
         this.repository = repository;
     }
 
+    private void response(Exception e, HttpStatus status) {
+        throw new ResponseStatusException(status, e.getMessage(), e);
+    }
+
     public Customer create(Customer customer) {
-        return repository.save(customer);
+        try {
+            return repository.save(customer);
+        } catch (Exception e) {
+            response(e, HttpStatus.BAD_REQUEST);
+            return null;
+        }
     }
 
     public void delete(Long id) {
-        repository.deleteById(id);
+        try {
+            repository.deleteById(id);
+        } catch (EmptyResultDataAccessException e) {
+            response(e, HttpStatus.NOT_FOUND);
+        }
     }
 
     public Customer update(Long id, Customer customer) {
