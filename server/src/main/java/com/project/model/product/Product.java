@@ -38,12 +38,7 @@ public class Product extends Data {
     }
 
     @OneToMany(
-            cascade = {
-                    CascadeType.PERSIST,
-                    CascadeType.MERGE,
-                    CascadeType.REFRESH,
-                    CascadeType.DETACH
-            },
+            cascade = CascadeType.ALL,
             mappedBy = "product",
             orphanRemoval = true
     )
