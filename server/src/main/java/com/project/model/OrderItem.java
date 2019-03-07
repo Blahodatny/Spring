@@ -43,6 +43,14 @@ public class OrderItem extends EntityId {
         this.quantity = quantity;
     }
 
+    public Order getOrder() {
+        return order;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof OrderItem)) return false;

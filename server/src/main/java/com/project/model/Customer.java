@@ -67,6 +67,19 @@ public class Customer extends EntityId {
         this.street = street;
     }
 
+
+    public String getCity() {
+        return city;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public Collection<Order> getOrders() {
+        return orders;
+    }
+
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Customer)) return false;

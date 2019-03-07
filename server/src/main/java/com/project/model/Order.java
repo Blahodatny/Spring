@@ -51,6 +51,14 @@ public class Order extends EntityAuditing {
         this.toStreet = toStreet;
     }
 
+    public Collection<OrderItem> getItems() {
+        return items;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Order)) return false;
