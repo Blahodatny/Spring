@@ -1,18 +1,18 @@
-package com.project.service.customer;
+package com.project.service;
 
-import com.project.model.customer.Customer;
+import com.project.model.Customer;
+import com.project.repository.dao.CustomerDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.project.repository.dao.CustomerDAOImpl;
 
 import java.util.Collection;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
-    private final CustomerDAOImpl dao;
+    private final CustomerDAO dao;
 
     @Autowired
-    public CustomerServiceImpl(CustomerDAOImpl dao) {
+    public CustomerServiceImpl(CustomerDAO dao) {
         this.dao = dao;
     }
 

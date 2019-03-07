@@ -1,4 +1,4 @@
-package com.project.service.customer;
+package com.project.service;
 
 import com.project.model.Customer;
 
