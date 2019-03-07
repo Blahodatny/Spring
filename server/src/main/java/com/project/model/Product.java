@@ -21,7 +21,7 @@ import java.util.Objects;
 public class Product extends EntityAuditing {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "product")
-    @SequenceGenerator(name = "product", sequenceName = "product_seq")
+    @SequenceGenerator(name = "product", sequenceName = "product_seq", allocationSize = 1)
     private Long id;
 
     @NotEmpty

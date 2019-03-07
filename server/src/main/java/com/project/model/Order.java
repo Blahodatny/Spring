@@ -24,7 +24,7 @@ import java.util.Objects;
 public class Order extends EntityAuditing {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "order")
-    @SequenceGenerator(name = "order", sequenceName = "order_seq")
+    @SequenceGenerator(name = "order", sequenceName = "order_seq", allocationSize = 1)
     private Long id;
 
     @NotEmpty

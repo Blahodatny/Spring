@@ -22,7 +22,7 @@ import java.util.Objects;
 public class OrderItem implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "item")
-    @SequenceGenerator(name = "item", sequenceName = "order_item_seq")
+    @SequenceGenerator(name = "item", sequenceName = "order_item_seq", allocationSize = 1)
     private Long id;
 
     @Positive

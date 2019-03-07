@@ -34,7 +34,11 @@ import java.util.Objects;
 public class Customer implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "customer")
-    @SequenceGenerator(name = "customer", sequenceName = "customer_seq")
+    @SequenceGenerator(
+            name = "customer",
+            sequenceName = "customer_seq",
+            allocationSize = 1
+    )
     private Long id;
 
     @Size(min = 10, max = 30)
