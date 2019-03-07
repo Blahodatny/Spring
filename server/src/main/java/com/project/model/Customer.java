@@ -5,11 +5,16 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Objects;
 
@@ -23,7 +28,12 @@ import java.util.Objects;
                 columnNames = "phone"
         )
 )
-public class Customer extends EntityId {
+public class Customer implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "gen")
+    @SequenceGenerator(name = "gen", sequenceName = "customer_seq")
+    private Long id;
+
     @Size(min = 10, max = 30)
     @Column(name = "phone", unique = true)
     private String phone;
@@ -45,11 +55,7 @@ public class Customer extends EntityId {
     @Column(name = "street", length = 50)
     private String street;
 
-    @OneToMany(
-            cascade = CascadeType.ALL,
-            mappedBy = "customer",
-            orphanRemoval = true
-    )
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "customer", orphanRemoval = true)
     private Collection<Order> orders;
 
     public Customer() {
@@ -57,7 +63,7 @@ public class Customer extends EntityId {
 
     public Customer(Long id, String phone, String firstName,
                     String lastName, String city, String street) {
-        super(id);
+        this.id = id;
         this.phone = phone;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -65,6 +71,9 @@ public class Customer extends EntityId {
         this.street = street;
     }
 
+    public Long getId() {
+        return id;
+    }
 
     public String getCity() {
         return city;
@@ -81,9 +90,9 @@ public class Customer extends EntityId {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Customer)) return false;
-        if (!super.equals(o)) return false;
         var customer = (Customer) o;
-        return Objects.equals(phone, customer.phone) &&
+        return Objects.equals(id, customer.id) &&
+                Objects.equals(phone, customer.phone) &&
                 Objects.equals(firstName, customer.firstName) &&
                 Objects.equals(lastName, customer.lastName) &&
                 Objects.equals(city, customer.city) &&
@@ -91,7 +100,7 @@ public class Customer extends EntityId {
     }
 
     public int hashCode() {
-        return Objects.hash(super.hashCode(), phone, firstName, lastName, city, street);
+        return Objects.hash(id, phone, firstName, lastName, city, street);
     }
 
     public void updateWith(Customer customer) {

@@ -9,12 +9,8 @@ import java.util.Collection;
 
 @Component
 public class CustomerDAOImpl implements CustomerDAO {
-    private final CustomerRepository repository;
-
     @Autowired
-    public CustomerDAOImpl(CustomerRepository repository) {
-        this.repository = repository;
-    }
+    private CustomerRepository repository;
 
     public Customer create(Customer customer) {
         return repository.save(customer);

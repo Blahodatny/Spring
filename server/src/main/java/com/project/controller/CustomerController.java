@@ -23,12 +23,8 @@ import java.util.Collection;
 @RestController
 @RequestMapping("api/v1/customers/")
 public class CustomerController {
-    private final CustomerService service;
-
     @Autowired
-    public CustomerController(CustomerService service) {
-        this.service = service;
-    }
+    private CustomerService service;
 
     @GetMapping
     public Collection<Customer> getAllCustomers() {

@@ -9,12 +9,13 @@ import javax.persistence.EntityListeners;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-abstract class EntityAuditing extends EntityId {
+abstract class EntityAuditing implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "created_at", nullable = false, updatable = false)
     @CreatedDate
@@ -28,8 +29,7 @@ abstract class EntityAuditing extends EntityId {
     EntityAuditing() {
     }
 
-    EntityAuditing(Long id, Date createdAt, Date updatedAt) {
-        super(id);
+    EntityAuditing(Date createdAt, Date updatedAt) {
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
     }
@@ -37,13 +37,12 @@ abstract class EntityAuditing extends EntityId {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof EntityAuditing)) return false;
-        if (!super.equals(o)) return false;
         var that = (EntityAuditing) o;
         return Objects.equals(createdAt, that.createdAt) &&
                 Objects.equals(updatedAt, that.updatedAt);
     }
 
     public int hashCode() {
-        return Objects.hash(super.hashCode(), createdAt, updatedAt);
+        return Objects.hash(createdAt, updatedAt);
     }
 }

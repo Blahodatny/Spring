@@ -9,12 +9,8 @@ import java.util.Collection;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
-    private final CustomerDAO dao;
-
     @Autowired
-    public CustomerServiceImpl(CustomerDAO dao) {
-        this.dao = dao;
-    }
+    private CustomerDAO dao;
 
     public Customer create(Customer customer) {
         return dao.create(customer);
