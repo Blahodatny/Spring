@@ -37,11 +37,7 @@ public class Product extends Data {
         return Objects.hash(id, createdAt, updatedAt, name, type);
     }
 
-    @OneToMany(
-            cascade = CascadeType.ALL,
-            mappedBy = "product",
-            orphanRemoval = true
-    )
+
     public Collection<OrderItem> getItems() {
         return items;
     }
