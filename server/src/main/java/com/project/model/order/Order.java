@@ -1,6 +1,7 @@
 package com.project.model.order;
 
-import com.project.model.customer.Customer;
+import com.project.model.EntityAuditing;
+import com.project.model.Customer;
 import com.project.model.order.item.OrderItem;
 
 import javax.persistence.Entity;
@@ -15,9 +16,8 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "ORDERS", catalog = "Boot", schema = "public")
-public class Order extends Address {
-    private Collection<OrderItem> items;
-    private Customer customer;
+public class Order extends EntityAuditing {
+
 
     public Order() {
     }
