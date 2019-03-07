@@ -1,6 +1,6 @@
 package com.project.service.customer;
 
-import com.project.model.customer.Customer;
+import com.project.model.Customer;
 
 import java.util.Collection;
 
