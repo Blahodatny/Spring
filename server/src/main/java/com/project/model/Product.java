@@ -15,11 +15,11 @@ import java.util.Objects;
 public class Product extends EntityAuditing {
     @NotEmpty
     @Column(name = "name", length = 50)
-    String name;
+    private String name;
 
     @NotEmpty
     @Column(name = "type", length = 50)
-    String type;
+    private String type;
 
     @OneToMany(
             cascade = CascadeType.ALL,
