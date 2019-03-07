@@ -1,5 +1,7 @@
 package com.project.model;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,15 +13,15 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 import java.util.Collection;
-import java.util.Date;
 import java.util.Objects;
 
 @Entity
 @Table(name = "PRODUCTS", catalog = "Boot", schema = "public")
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 public class Product extends EntityAuditing {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "gen")
-    @SequenceGenerator(name = "gen", sequenceName = "product_seq")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "product")
+    @SequenceGenerator(name = "product", sequenceName = "product_seq")
     private Long id;
 
     @NotEmpty
@@ -34,13 +36,6 @@ public class Product extends EntityAuditing {
     private Collection<OrderItem> items;
 
     public Product() {
-    }
-
-    public Product(Date createdAt, Date updatedAt, Long id, String name, String type) {
-        super(createdAt, updatedAt);
-        this.id = id;
-        this.name = name;
-        this.type = type;
     }
 
     public Collection<OrderItem> getItems() {

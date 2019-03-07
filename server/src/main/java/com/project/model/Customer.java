@@ -1,5 +1,7 @@
 package com.project.model;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -28,10 +30,11 @@ import java.util.Objects;
                 columnNames = "phone"
         )
 )
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 public class Customer implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "gen")
-    @SequenceGenerator(name = "gen", sequenceName = "customer_seq")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "customer")
+    @SequenceGenerator(name = "customer", sequenceName = "customer_seq")
     private Long id;
 
     @Size(min = 10, max = 30)
@@ -59,16 +62,6 @@ public class Customer implements Serializable {
     private Collection<Order> orders;
 
     public Customer() {
-    }
-
-    public Customer(Long id, String phone, String firstName,
-                    String lastName, String city, String street) {
-        this.id = id;
-        this.phone = phone;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.city = city;
-        this.street = street;
     }
 
     public Long getId() {

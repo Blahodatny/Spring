@@ -1,5 +1,7 @@
 package com.project.model;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -16,10 +18,11 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "ORDER_ITEMS", catalog = "Boot", schema = "public")
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 public class OrderItem implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "gen")
-    @SequenceGenerator(name = "gen", sequenceName = "order_item_seq")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "item")
+    @SequenceGenerator(name = "item", sequenceName = "order_item_seq")
     private Long id;
 
     @Positive
@@ -35,11 +38,6 @@ public class OrderItem implements Serializable {
     private Product product;
 
     public OrderItem() {
-    }
-
-    public OrderItem(Long id, int quantity) {
-        this.id = id;
-        this.quantity = quantity;
     }
 
     public Order getOrder() {

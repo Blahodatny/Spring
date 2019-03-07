@@ -1,5 +1,7 @@
 package com.project.model;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,15 +16,15 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 import java.util.Collection;
-import java.util.Date;
 import java.util.Objects;
 
 @Entity
 @Table(name = "ORDERS", catalog = "Boot", schema = "public")
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 public class Order extends EntityAuditing {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "gen")
-    @SequenceGenerator(name = "gen", sequenceName = "order_seq")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "order")
+    @SequenceGenerator(name = "order", sequenceName = "order_seq")
     private Long id;
 
     @NotEmpty
@@ -41,14 +43,6 @@ public class Order extends EntityAuditing {
     private Customer customer;
 
     public Order() {
-    }
-
-    public Order(Date createdAt, Date updatedAt, Long id,
-                 String toCity, String toStreet) {
-        super(createdAt, updatedAt);
-        this.id = id;
-        this.toCity = toCity;
-        this.toStreet = toStreet;
     }
 
     public Collection<OrderItem> getItems() {

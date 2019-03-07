@@ -29,11 +29,6 @@ abstract class EntityAuditing implements Serializable {
     EntityAuditing() {
     }
 
-    EntityAuditing(Date createdAt, Date updatedAt) {
-        this.createdAt = createdAt;
-        this.updatedAt = updatedAt;
-    }
-
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof EntityAuditing)) return false;
