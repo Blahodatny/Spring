@@ -1,22 +1,21 @@
 package com.project.repository.dao;
 
 import com.project.exception.ResourceNotFoundException;
-import com.project.model.customer.Customer;
+import com.project.model.Customer;
+import com.project.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import com.project.repository.CustomerRepository;
 
 import java.util.Collection;
 
 @Component
 public class CustomerDAO {
-    @Autowired
-    private CustomerRepository repository;
+    private final CustomerRepository repository;
 
-/*    @Autowired
+    @Autowired
     public CustomerDAO(CustomerRepository repository) {
         this.repository = repository;
-    }*/
+    }
 
     public Customer create(Customer customer) {
         return repository.save(customer);

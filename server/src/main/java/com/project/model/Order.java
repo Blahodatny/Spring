@@ -1,7 +1,5 @@
 package com.project.model;
 
-import com.project.model.order.item.OrderItem;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,6 +1,6 @@
 package com.project.repository;
 
-import com.project.model.order.item.OrderItem;
+import com.project.model.OrderItem;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,8 +1,5 @@
 package com.project.model;
 
-import com.project.model.order.Order;
-import com.project.model.product.Product;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;

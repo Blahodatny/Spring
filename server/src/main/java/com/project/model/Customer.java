@@ -1,7 +1,5 @@
 package com.project.model;
 
-import com.project.model.order.Order;
-
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -94,5 +92,13 @@ public class Customer extends EntityId {
 
     public int hashCode() {
         return Objects.hash(super.hashCode(), phone, firstName, lastName, city, street);
+    }
+
+    public void updateWith(Customer customer) {
+        phone = customer.phone;
+        firstName = customer.firstName;
+        lastName = customer.lastName;
+        city = customer.city;
+        street = customer.street;
     }
 }

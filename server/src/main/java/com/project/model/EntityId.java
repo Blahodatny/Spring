@@ -9,7 +9,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 @MappedSuperclass
-public abstract class EntityId implements Serializable {
+abstract class EntityId implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "gen")
     @SequenceGenerator(name = "gen", sequenceName = "seq")
