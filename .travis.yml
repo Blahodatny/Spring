@@ -10,13 +10,13 @@ script:
 
 before_cache:
   - rm -f  $HOME/context/.gradle/caches/modules-2/modules-2.lock
-  - rm -f  $HOME/server/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/context/.gradle/caches/*/plugin-resolution/
+  - rm -f  $HOME/server/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/server/.gradle/caches/*/plugin-resolution/
 
 cache:
   directories:
     - $HOME/context/.gradle/caches/
-    - $HOME/server/.gradle/caches/
     - $HOME/context/.gradle/wrapper/
+    - $HOME/server/.gradle/caches/
     - $HOME/server/.gradle/wrapper/
