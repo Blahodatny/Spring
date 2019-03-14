@@ -4,24 +4,14 @@ install: true
 jdk:
   - oraclejdk11
 
-jobs:
-  include:
-    - stage: compile
-      script: ./context/gradlew build --scan -s 1
-    - script: ./server/gradlew build --scan -s 2
-#script:
-#  - ./context/gradlew build --scan -s
-#  - ./server/gradlew build --scan -s
+script:
+  - ./gradlew build --scan -s
 
 before_cache:
-  - rm -f  $HOME/context/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/context/.gradle/caches/*/plugin-resolution/
-  - rm -f  $HOME/server/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/server/.gradle/caches/*/plugin-resolution/
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 
 cache:
   directories:
-    - $HOME/context/.gradle/caches/
-    - $HOME/context/.gradle/wrapper/
-    - $HOME/server/.gradle/caches/
-    - $HOME/server/.gradle/wrapper/
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
