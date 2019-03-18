@@ -5,13 +5,20 @@ jdk:
   - oraclejdk11
 
 script:
+  - cd context
+  - ./gradlew build --scan -s
+  - cd ../server
   - ./gradlew build --scan -s
 
 before_cache:
-  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+  - rm -f  $HOME/context/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/context/.gradle/caches/*/plugin-resolution/
+  - rm -f  $HOME/server/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/server/.gradle/caches/*/plugin-resolution/
 
 cache:
   directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
+    - $HOME/context/.gradle/caches/
+    - $HOME/context/.gradle/wrapper/
+    - $HOME/server/.gradle/caches/
+    - $HOME/server/.gradle/wrapper/
