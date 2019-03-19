@@ -16,7 +16,7 @@ plugins {
     id 'java'
     id 'com.gradle.build-scan' version '2.1'
 }
-//apply plugin: 'java'
+
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
