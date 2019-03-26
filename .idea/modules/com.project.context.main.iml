@@ -5,7 +5,7 @@
       <configuration />
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_11">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_12">
     <output url="file://$MODULE_DIR$/../../context/out/production/classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../context/src/main">
@@ -14,11 +14,11 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework:spring-aop:5.1.5.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework:spring-expression:5.1.5.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework:spring-beans:5.1.5.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework:spring-context:5.1.5.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework:spring-jcl:5.1.5.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework:spring-aop:5.1.5.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework:spring-core:5.1.5.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework:spring-jcl:5.1.5.RELEASE" level="project" />
   </component>
 </module>

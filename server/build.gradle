@@ -23,7 +23,7 @@ apply plugin: 'io.spring.dependency-management'
 group 'com.project'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 11
+sourceCompatibility = 12
 
 repositories {
     mavenCentral()
