@@ -1,11 +1,10 @@
 package xml;
 
 import com.project.model.Customer;
-import org.springframework.beans.factory.annotation.Value;
 import com.project.repository.CustomerRepository;
-
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Value;
 
 public class HibernateCustomerRepositoryImpl implements CustomerRepository {
     @Value("${dbUser}")

@@ -1,7 +1,6 @@
 package com.project.repository.dao;
 
 import com.project.model.Customer;
-
 import java.util.Collection;
 
 public interface CustomerDAO {

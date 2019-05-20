@@ -1,11 +1,10 @@
 package annotation;
 
+import com.project.model.Customer;
+import com.project.repository.CustomerRepository;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.project.model.Customer;
 import org.springframework.stereotype.Repository;
-import com.project.repository.CustomerRepository;
 
 @Repository("customerRepository")
 public class HibernateCustomerRepositoryImpl implements CustomerRepository {

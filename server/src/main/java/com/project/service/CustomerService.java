@@ -1,7 +1,6 @@
 package com.project.service;
 
 import com.project.model.Customer;
-
 import java.util.Collection;
 
 public interface CustomerService {

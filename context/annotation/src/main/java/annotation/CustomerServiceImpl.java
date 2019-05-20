@@ -1,19 +1,17 @@
 package annotation;
 
 import com.project.model.Customer;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import com.project.repository.CustomerRepository;
 import com.project.service.CustomerService;
-
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 @Service("customerService")
 public class CustomerServiceImpl implements CustomerService {
     private CustomerRepository customerRepository;
 
-    public CustomerServiceImpl() {
-    }
+    public CustomerServiceImpl() {}
 
     //    @Autowired
     public CustomerServiceImpl(CustomerRepository repository) {
@@ -21,9 +19,7 @@ public class CustomerServiceImpl implements CustomerService {
         this.customerRepository = repository;
     }
 
-    public List<Customer> findAll() {
-        return customerRepository.findAll();
-    }
+    public List<Customer> findAll() { return customerRepository.findAll(); }
 
     @Autowired
     public void setCustomerRepository(CustomerRepository customerRepository) {

@@ -1,7 +1,9 @@
 package com.project.model;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
-
+import java.io.Serializable;
+import java.util.Collection;
+import java.util.Objects;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -16,29 +18,20 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
-import java.io.Serializable;
-import java.util.Collection;
-import java.util.Objects;
 
 @Entity
-@Table(
-        name = "CUSTOMERS",
+@Table(name = "CUSTOMERS",
         catalog = "Boot",
         schema = "public",
-        uniqueConstraints = @UniqueConstraint(
-                name = "phone_uindex",
-                columnNames = "phone"
-        )
-)
+        uniqueConstraints = @UniqueConstraint(name = "phone_uindex",
+                columnNames = "phone"))
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 public class Customer implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "customer")
-    @SequenceGenerator(
-            name = "customer",
+    @SequenceGenerator(name = "customer",
             sequenceName = "customer_seq",
-            allocationSize = 1
-    )
+            allocationSize = 1)
     private Long id;
 
     @Size(min = 10, max = 30)
@@ -62,31 +55,26 @@ public class Customer implements Serializable {
     @Column(name = "street", length = 50)
     private String street;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "customer", orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.ALL,
+            mappedBy = "customer",
+            orphanRemoval = true)
     private Collection<Order> orders;
 
-    public Customer() {
-    }
+    public Customer() {}
 
-    public Long getId() {
-        return id;
-    }
+    public Long getId() { return id; }
 
-    public String getCity() {
-        return city;
-    }
+    public String getCity() { return city; }
 
-    public String getStreet() {
-        return street;
-    }
+    public String getStreet() { return street; }
 
-    public Collection<Order> getOrders() {
-        return orders;
-    }
+    public Collection<Order> getOrders() { return orders; }
 
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Customer)) return false;
+        if (this == o)
+            return true;
+        if (!(o instanceof Customer))
+            return false;
         var customer = (Customer) o;
         return Objects.equals(id, customer.id) &&
                 Objects.equals(phone, customer.phone) &&

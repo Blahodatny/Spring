@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module external.linked.project.id="context:test" external.linked.project.path="$MODULE_DIR$/../../context" external.root.project.path="$MODULE_DIR$/../../context" external.system.id="GRADLE" external.system.module.group="com.project" external.system.module.type="sourceSet" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_12">
-    <output-test url="file://$MODULE_DIR$/../../context/out/test/classes" />
+    <output-test url="file://$MODULE_DIR$/../../context/build/classes/java/test" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../context/src/test">
       <sourceFolder url="file://$MODULE_DIR$/../../context/src/test/java" isTestSource="true" />
@@ -10,12 +10,12 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="com.project.context.main" />
-    <orderEntry type="library" name="Gradle: org.springframework:spring-context:5.1.5.RELEASE" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework:spring-aop:5.1.5.RELEASE" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework:spring-beans:5.1.5.RELEASE" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework:spring-expression:5.1.5.RELEASE" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework:spring-core:5.1.5.RELEASE" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework:spring-jcl:5.1.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-context:5.1.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-aop:5.1.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-beans:5.1.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-expression:5.1.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-core:5.1.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-jcl:5.1.7.RELEASE" level="project" />
   </component>
-  <component name="TestModuleProperties" production-module="com.project.context.main" />
+  <component name="TestModuleProperties" production-module="context.main" />
 </module>
