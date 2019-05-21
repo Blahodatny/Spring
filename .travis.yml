@@ -5,10 +5,8 @@ jdk:
   - openjdk12
 
 script:
-  - cd context
-  - ./gradlew build --scan -s
-  - cd ../server
-  - ./gradlew build --scan -s
+  - (cd context; ./gradlew build --scan -s)
+  - (cd server; ./gradlew build --scan -s)
 
 before_cache:
   - rm -f  $HOME/context/.gradle/caches/modules-2/modules-2.lock
